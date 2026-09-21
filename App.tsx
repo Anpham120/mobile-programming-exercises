@@ -1,7 +1,13 @@
 import { StatusBar, StyleSheet, Text, View } from 'react-native';
 
+type BoxProps = {
+  color: string;
+  number: string;
+  dark?: boolean;
+};
+
 // Một ô màu, số nằm giữa. dark = số màu đen (dùng cho nền vàng)
-function Box({ color, number, dark }) {
+function Box({ color, number, dark }: BoxProps) {
   return (
     <View style={[styles.box, { backgroundColor: color }]}>
       <Text style={[styles.number, dark && styles.numberDark]}>{number}</Text>
