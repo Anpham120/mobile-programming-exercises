@@ -23,22 +23,25 @@ export default function App() {
       <StatusBar barStyle="dark-content" backgroundColor="#fff" />
 
       <View style={styles.grid}>
-        {/* Hàng 1: ô 1 và ô 2 chia đều */}
-        <View style={styles.row}>
+        {/* Hàng 1 và hàng 2: mỗi ô rộng hết hàng, cả khối cao bằng hàng 3 */}
+        <View style={styles.stack}>
           <Box number="1" color="#1E7FEF" />
           <Box number="2" color="#EA3A34" />
         </View>
 
-        {/* Hàng 2: ô 3 + ô 4 gộp lại rộng bằng ô 1, ô 5 rộng bằng ô 2 */}
+        {/* Hàng 3: ô 3 + ô 4 gộp lại rộng nửa hàng, ô 5 rộng bằng ô 3, bên phải để trống */}
         <View style={styles.row}>
           <View style={styles.half}>
             <Box number="3" color="#FCD216" dark />
             <Box number="4" color="#22A04F" />
           </View>
-          <Box number="5" color="#7B2FE0" />
+          <View style={styles.half}>
+            <Box number="5" color="#7B2FE0" />
+            <View style={styles.spacer} />
+          </View>
         </View>
 
-        {/* Hàng 3: ô 6 rộng bằng ô 1, bên phải để trống */}
+        {/* Hàng 4: ô 6 rộng nửa hàng, bên phải để trống */}
         <View style={styles.lastRow}>
           <Box number="6" color="#F98307" />
           <View style={styles.spacer} />

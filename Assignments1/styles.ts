@@ -15,24 +15,30 @@ export const styles = StyleSheet.create({
   grid: {
     flex: 7,
   },
-  // Hàng 1 và hàng 2
+  // Khối hàng 1 + hàng 2 (xếp dọc): cùng flex 6 với hàng 3 nên cả khối cao bằng hàng 3
+  stack: {
+    flex: 6,
+    gap: GAP,
+    marginBottom: GAP,
+  },
+  // Hàng 3: ô 3, 4, 5
   row: {
     flex: 6,
     flexDirection: 'row',
     gap: GAP,
     marginBottom: GAP,
   },
-  // Hàng 3: thấp hơn, không chừa khoảng cách phía dưới
+  // Hàng 4: thấp hơn, không chừa khoảng cách phía dưới
   lastRow: {
     flex: 5,
     flexDirection: 'row',
     gap: GAP,
   },
-  // Khoảng trắng bên phải ô 6, rộng bằng ô 2 nên ô 6 rộng bằng ô 1
+  // Khoảng trắng bên phải ô 5 và ô 6, chia đều chỗ với ô bên trái nó
   spacer: {
     flex: 1,
   },
-  // Nửa trái hàng 2: chứa ô 3 + ô 4, rộng đúng bằng ô 1
+  // Nửa hàng 3 (trái: ô 3 + ô 4, phải: ô 5 + khoảng trắng), rộng đúng bằng ô 6
   half: {
     flex: 1,
     flexDirection: 'row',
